@@ -1,0 +1,7 @@
+This code is used to get data from instagram for a particular location given the coordinates and a radius for any given timeframe. Once the users are known it gets their entire timeline and compiles all the data in a TSV file.
+It was used in particular to get data for museums of NYC(like MoMa, Metropolitan museum and Museum of American history) and places like macy's and union square park. 
+hist_geo.py -> Collects the user id's and posts for the given geo location, radius and timeframe
+track_user.py -> Tracks the entire timeline of the users found using hist_geo.py
+data_compile.py -> Filter the users who are from NYC(heuristic based approach) and compile it into a data file.
+
+The code will need a config file which has not been uploaded because it contains sensitive keys.
