@@ -9,8 +9,9 @@ def read_data(filename):
 if __name__ == "__main__":
 	p = read_data("moma_user_baseline.csv")
 	# map(int,p)
-	K = 3
+	K = 4
 	km = KMeans(n_clusters = K)
 	km.fit(p)
 	print km.labels_
+	print km.cluster_centers_
 
