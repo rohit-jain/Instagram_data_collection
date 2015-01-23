@@ -29,7 +29,7 @@ def analyze(filename):
 	X = read_data(filename)
 	coeffs = [] 
 	for k in range(MIN_N_CLUSTERS,MAX_N_CLUSTERS):
-		coeffs.append(cluster(k))
+		coeffs.append(cluster(X,k))
 	plot_coefficients(coeffs)
 
 if __name__ == "__main__":
