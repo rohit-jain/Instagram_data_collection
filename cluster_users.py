@@ -14,7 +14,7 @@ def read_data(filename):
 
 def cluster(X,K):
 	X = np.array(X)
-	km = KMeans(n_clusters = K)
+	km = KMeans(n_clusters = K, n_init = 200, max_iter = 5000)
 	km.fit(X)
 	labels = km.labels_
 	return metrics.silhouette_score(X, labels, metric='euclidean')
